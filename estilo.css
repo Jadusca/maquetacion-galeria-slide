@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+header {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header figure {
+  width: 150px;
+}
+
+header figure img {
+  width: 100%;
+  height: 100%;
+}
+
+header nav a {
+  display: inline-block;
+  border-bottom: 3px transparent solid;
+  margin-right: 30px;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  transition: all 0.3s;
+}
+
+header nav a:hover {
+  padding: 5px;
+  border-bottom: 3px red solid;
+}
+
+.menu2 {
+  color: #ff4048;
+  /* top:0;
+  right:0; */
+  display: none;
+}
+
+/* CSS de slide de fotos */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  height: 750px;
+  min-height: 400px;
+  padding: 0;
+}
+
+.rslides li {
+  backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  min-height: 400px;
+  float: left;
+  width: 100%;
+  object-fit: cover;
+  border: 0;
+}
+
+/* Fin de css */
+
+.slidesfotos {
+  position: relative;
+}
+
+.texto {
+  color: black;
+  text-align: end;
+  position: absolute;
+  z-index: 10;
+  top: 28%;
+  left: 70%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.texto h1 {
+  color: #ff4048;
+  font-size: 60px;
+  line-height: 68px;
+}
+
+.texto a {
+  display: inline-block;
+  margin-top: 5px;
+  text-decoration: none;
+  color: white;
+  padding: 10px 30px;
+  background-color: #ff4048;
+  border-radius: 5px;
+  border: 3px transparent solid;
+  transition: all 0.5s;
+}
+
+.texto a:hover {
+  background-color: white;
+  border-radius: 5px;
+  border: 3px #ff4048 solid;
+  color: black;
+}
+
+.servicios {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.servicios h1 {
+  text-align: center;
+  padding: 10px;
+  color: black;
+  font-size: 35px;
+  margin-top: 40px;
+}
+
+.conte-serv {
+  /* border: 1px red solid; */
+  max-width: 1200px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 25px;
+}
+
+.conte-serv article {
+  /* border: 1px green solid; */
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+.conte-serv article i {
+  font-size: 40px;
+  color: #ff4048;
+  border: 2px #9c9c9c solid;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.conte-serv article h3 {
+  color: black;
+  font-size: 15px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+hr {
+  display: none;
+}
+
+.galeria {
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+}
+
+.galeria article {
+  width: 600px;
+  padding: 30px;
+  height: 400px;
+  margin-top: 110px;
+}
+
+.galeria article h1 {
+  color: black;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 35px;
+}
+
+.galeria article span {
+  font-weight: lighter;
+}
+
+.imagenes {
+  width: 900px;
+  display: grid;
+  grid-template-areas: "mujeres gimnasio" "mujer hombre";
+}
+
+.imagenes img {
+  width: 100%;
+  display: block;
+}
+
+.imagen1 {
+  grid-area: mujeres;
+}
+.imagen2 {
+  grid-area: hombre;
+}
+.imagen3 {
+  grid-area: gimnasio;
+}
+.imagen4 {
+  grid-area: mujer;
+}
+
+.galeria article a{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #ff4048;
+  padding: 15px 30px;
+  margin-top: 35px;
+  transition: all 0.5s;
+  border: 2px transparent solid;
+}
+
+.galeria article a:hover{
+  background-color: white;
+  border: 2px #ff4048 solid;
+  color: black;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Oculto por defecto */
+  background-color: #ff4048;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+}
+
+.scrollToTop:hover {
+  background-color: #ff4048;
+}
+
+footer{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2px #9c9c9c solid;
+}
+
+.iconos-redes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+.borde-icono{
+  width: 30px;
+  padding: 25px;
+  height: 30px;
+  border: 2px #9c9c9c solid;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconos-redes i{
+  color: #ff4048;
+  font-size: 20px;
+}
